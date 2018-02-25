@@ -1,0 +1,12 @@
+
+all: server.c client.c
+
+	gcc -g -Wall -o server server.c -lpthread -lm
+	gcc -g -Wall -o client client.c -lpthread -lm
+
+
+	./server
+	./client
+
+
+clean:$(RM) server
